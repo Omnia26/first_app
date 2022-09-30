@@ -1,0 +1,59 @@
+import 'package:flutter/material.dart';
+
+class Adrbk extends StatefulWidget {
+  @override
+  //  _AdrbkState createState() => _AdrbkState();
+  State<Adrbk> createState() => _AdrbkState();
+}
+class _AdrbkState extends State<Adrbk> {
+  int counter = 0;
+
+
+  @override
+  void initState() {
+    super.initState();
+  }
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text(
+          'counter',
+        ),
+      ),
+      body: Row(
+        children: [
+          TextButton(
+            onPressed: () {
+              setState(() {
+                counter--;
+              print(counter);
+              });
+            },
+            child: Text(
+              'minus',
+            ),
+          ),
+          Text(
+            '$counter',
+            style: TextStyle(
+              fontSize: 50,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+          TextButton(
+            onPressed: () {
+              setState(() {
+                counter++;
+              print(counter);
+              });
+            },
+            child: Text(
+              'plus',
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
